@@ -1,6 +1,5 @@
 .header__button {
-
-    border: double;
-    border-radius: 1px solid #2F2F2F;
-    margin: 4px;
+  border: double;
+  border-radius: 1px solid #2F2F2F;
+  margin: 4px;
 }

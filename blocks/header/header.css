@@ -24,7 +24,7 @@ elements */
   max-width: 90%;
   border: 5px solid #0077B6;
   border-radius: 10px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin: auto;
   justify-content: space-between;
 }
