@@ -1,0 +1,14 @@
+.header__button_type_expand {
+  border: none;
+  width: 30px;
+  height: 45px;
+  background-image: url(../../../images/dblarr.png);
+  background-repeat: no-repeat;
+  background-size: 30px 45px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.header__button_type_expand {
+  border: none;
+}

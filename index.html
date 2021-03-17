@@ -3,102 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
     <title>To Do test</title>
 </head>
-<body>
+<body class="root">
     <header class="header">
       <!--
         this is a header where I'll make space at
         the top and add in a title
       -->
-    </header>
-    <nav class="navigation">
-      <!--
-        maybe add a nav section to link to other saved
-        lists? we can play with the idea more later
-      -->
-    </nav>
-    <section class="list-title">
-      <!--
-        Lets make a section similar to project 4's
-        profile where you can add in a name and description
-        for your to do list
-
-        this section should have a different background color
-        and should have a fixed position at the top of the page
-        so you can scroll down without losing access to buttons
-
-        the edit button should be here, as well as the add
-        list item button and remove item one
-      -->
-
-      <div class="profile__profile-info">
-        <h1 class=""></h1>
-
-        <button class="button-hover" type="button" aria-label="Edit List">
-        </button>
-
-        <p class=""></p>
-
+      <div class="header__info-wrapper">
+        <h1 class="header__title"> My to-do List</h1>
+        <p class="header__description">I made this list to make me remember to do things</p>
+        <button class="header__button header__button_type_expand" type="button"></button>
       </div>
-      <button class="button-hover" aria-label="Add List Item" type="button">
-      </button>
-    </section>
+      <form class="header__form">
+        <input name="title" type="text" class="header__form-input" placeholder="Item Title" minlength="1" maxlength="64">
+        <input name="description" type="text" class="header__form-input" placeholder="Item Description" minlength="2" maxlength="512">
+        <button class="header__form-button header__form-button_type_submit" type="submit" required>Submit</button>
+        <button class="header__form-button header__form-button_type_reset" type="reset">Reset</button>
+        <button class="header__form-button header__form-button_type_delete" type="button">Delete Checked</button>
+      </form>
+    </header>
+
+    <!--
+      <nav class="navigation">
+
+          maybe add a nav section to link to other saved
+          lists? we can play with the idea more later
+
+      </nav>
+    -->
+
     <section class="list-body">
-      <!--
-        Lets make an unordered list where things can be added. making them use
-        check boxes as their list style would be a good touch
-        then we can make it so they lose opacity when checked
 
-        we can add an overlay with another grid which lines up
-        with the check boxes and adds another set of them for
-        removal purposes
+      <ul class="list-body__container">
+        <li class="list-item">
+          <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          <h2 class="list-item__title">Wash Cat awsedrftgyhujhygtfvrdesdrftgyu</h2>
+          <p class="list-item__description list-item__description_selected">May also need to buy Band-Aids...May also need to buy Band-Aids...May also need to buy Band-Aids...
+            May also need to buy Band-Aids...May also need to buy Band-Aids...</p>
+        </li>
+        <li class="list-item">
+          <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          <h2 class="list-item__title">Wash Cat</h2>
+          <p class="list-item__description list-item__description_selected">May also need to buy Band-Aids...</p>
+        </li>
+        <li class="list-item">
+          <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          <h2 class="list-item__title">Wash Cat</h2>
+          <p class="list-item__description">May also need to buy Band-Aids...</p>
+        </li>
 
-        the overlay itself should appear whenever you go to
-        add a new item, or select which ones will be deleted
-        the opacity should be much lower when selecting things
-        for deletion
-      -->
+
+
+      </ul>
+
     </section>
+
     <footer class="footer">
+      <p>A Collaborative Work by LES & NDA</p>
       <!--
         footer should just be a copyright block, nothing fancy
       -->
     </footer>
-    <div class="overlay">
-      <section>
-        <!--
-          list items checkbox for deletion, delete button,
-          close button
-        -->
-      </section>
-      <form class="list-title-edits" name="list-title-edits">
-        <h2 class="list-form__title">
-          Name Your To Do List
-        </h2>
 
-        <input type="text" required class="" placeholder="Title" name="Title">
-        <input type="text" required class="" placeholder="Description" name="Description">
-
-        <button type="submit" class="edit-form__save-button button-hover">Save
-      </form>
-      <form>
-
-      </form>
-    </div>
     <template>
-      <li>
-        <h3>
-
-        </h3>
-        <p>
-
-        </p>
-        <button>
-
-        </button>
+      <li class="list-item">
+        <input name="checkbox" class="list-item__checkbox" type="checkbox">
+        <h2 class="list-item__title"></h2>
+        <p class="list-item__description marked-for-deletion"></p>
       </li>
     </template>
+
     <script src="./scripts/script.js"></script>
 </body>
 </html>

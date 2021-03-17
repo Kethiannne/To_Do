@@ -1,0 +1,10 @@
+.list-item__description {
+  font-size: 16px;
+  line-height: 1.15;
+  font-weight: 400;
+  margin: auto 60px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 60%;
+}

@@ -1,0 +1,11 @@
+.list-item__title {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin: auto 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 20%;
+
+}

@@ -1,0 +1,14 @@
+@import url(./);
+
+@import url(./__checkbox/list-item__checkbox.css);
+@import url(./__title/list-item__title.css);
+@import url(./__description/list-item__description.css);
+
+.list-item {
+  display: flex;
+  flex-wrap: nowrap;
+  max-width: 80%;
+  border: #0077B6 solid 1px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
