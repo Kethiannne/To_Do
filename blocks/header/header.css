@@ -21,8 +21,8 @@ elements */
 
 .header {
   display: flex;
-  max-width: 90%;
-  border: 5px solid #0077B6;
+  width: 90%;
+  border: 3px solid #0077B6;
   border-radius: 10px;
   flex-wrap: nowrap;
   margin: auto;

@@ -1,0 +1,7 @@
+@import url(./__container/starred-items__container.css);
+@import url(./__title/starred-items__title.css);
+@import url(./__line/starred-items__line.css);
+
+.starred-items {
+  margin: 0 auto;
+}

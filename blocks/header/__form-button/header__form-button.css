@@ -1,3 +1,6 @@
 .header__form-button {
   min-width: 95px;
+  border-radius: 5px;
+  background-color: #ddd5d0;
+  color: #2F2F2F;
 }

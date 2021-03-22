@@ -13,7 +13,7 @@
         the top and add in a title
       -->
       <div class="header__info-wrapper">
-        <h1 class="header__title"> My to-do List</h1>
+        <h1 class="header__title"> My To-Do List</h1>
         <p class="header__description">I made this list to make me remember to do things</p>
         <button class="header__button header__button_type_expand" type="button"></button>
       </div>
@@ -36,23 +36,54 @@
     -->
 
     <section class="list-body">
+      <div class="starred-items">
+        <h2 class="starred-items__title">Starred Items</h2>
+        <div class="starred-items__line"></div>
+        <ul class="starred-items__container">
+                    <!-- example: -->
+          <li class="list-item">
+            <div class="list-item__checkbox-holder">
+              <input name="checkbox" class="list-item__checkbox" type="checkbox">
+            </div>
+            <h2 class="list-item__title">Wash Cat</h2>
+            <p class="list-item__description">May also need to buy Band-Aids...</p>
+            <button class="list-item__star" type="button">
+            </button>
+          </li>
+        </ul>
+      </div>
 
+
+      <h2 class="starred-items__title">Standard Items</h2>
+      <div class="starred-items__line"></div>
       <ul class="list-body__container">
         <li class="list-item">
-          <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          <div class="list-item__checkbox-holder">
+            <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          </div>
           <h2 class="list-item__title">Wash Cat awsedrftgyhujhygtfvrdesdrftgyu</h2>
           <p class="list-item__description list-item__description_selected">May also need to buy Band-Aids...May also need to buy Band-Aids...May also need to buy Band-Aids...
             May also need to buy Band-Aids...May also need to buy Band-Aids...</p>
+            <button class="list-item__star" type="button">
+            </button>
         </li>
         <li class="list-item">
-          <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          <div class="list-item__checkbox-holder">
+            <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          </div>
           <h2 class="list-item__title">Wash Cat</h2>
           <p class="list-item__description list-item__description_selected">May also need to buy Band-Aids...</p>
+          <button class="list-item__star" type="button">
+          </button>
         </li>
         <li class="list-item">
-          <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          <div class="list-item__checkbox-holder">
+            <input name="checkbox" class="list-item__checkbox" type="checkbox">
+          </div>
           <h2 class="list-item__title">Wash Cat</h2>
           <p class="list-item__description">May also need to buy Band-Aids...</p>
+          <button class="list-item__star" type="button">
+          </button>
         </li>
 
 
@@ -62,13 +93,13 @@
     </section>
 
     <footer class="footer">
-      <p>A Collaborative Work by LES & NDA</p>
+      <p class="footer__text">A Collaborative Work by LES & NDA</p>
       <!--
         footer should just be a copyright block, nothing fancy
       -->
     </footer>
 
-    <template>
+    <template id="list-item-template">
       <li class="list-item">
         <input name="checkbox" class="list-item__checkbox" type="checkbox">
         <h2 class="list-item__title"></h2>
@@ -76,6 +107,6 @@
       </li>
     </template>
 
-    <script src="./scripts/script.js"></script>
+    <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
