@@ -51,7 +51,7 @@ class FormValidator {
         saveButton.classList.remove(this._inactiveButtonClass);
       }
     };
-  //--
+  //
 
   _setEventListeners () {
     const inputList = Array.from(this._formElement.querySelectorAll(this._inputSelector));

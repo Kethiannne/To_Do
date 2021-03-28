@@ -1,10 +1,11 @@
 /* @import url(./); */
 
-@import url(./__checkbox/list-item__checkbox.css);
 @import url(./__title/list-item__title.css);
 @import url(./__description/list-item__description.css);
 @import url(./__checkbox-holder/list-item__checkbox-holder.css);
 @import url(./__star/list-item__star.css);
+
+@import url(./__star/_clicked/list-item__star_clicked.css);
 
 
 .list-item {

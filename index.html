@@ -1,112 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>To Do test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./pages/index.css">
+  <title>To Do test</title>
 </head>
+
 <body class="root">
-    <header class="header">
-      <!--
-        this is a header where I'll make space at
-        the top and add in a title
-      -->
-      <div class="header__info-wrapper">
-        <h1 class="header__title"> My To-Do List</h1>
-        <p class="header__description">I made this list to make me remember to do things</p>
-        <button class="header__button header__button_type_expand" type="button"></button>
-      </div>
-      <form class="header__form">
-        <input name="title" type="text" class="header__form-input" placeholder="Item Title" minlength="1" maxlength="64">
-        <input name="description" type="text" class="header__form-input" placeholder="Item Description" minlength="2" maxlength="512">
-        <button class="header__form-button header__form-button_type_submit" type="submit" required>Submit</button>
-        <button class="header__form-button header__form-button_type_reset" type="reset">Reset</button>
-        <button class="header__form-button header__form-button_type_delete" type="button">Delete Checked</button>
-      </form>
-    </header>
+  <header class="header">
+    <div class="header__info-wrapper">
+      <h1 class="header__title"> My To-Do List</h1>
+      <p class="header__description">I made this list to make me remember to do things</p>
+      <button class="header__button header__button_type_expand" type="button"></button>
+    </div>
+    <form class="header__form" name="headerForm">
 
-    <!--
-      <nav class="navigation">
+      <input name="title" type="text" class="header__form-input" placeholder="Item Title" minlength="1" maxlength="64">
+      <input name="description" type="text" class="header__form-input" placeholder="Item Description" minlength="2" maxlength="512">
 
-          maybe add a nav section to link to other saved
-          lists? we can play with the idea more later
+      <button class="header__form-button header__form-button_type_submit" type="submit" required>Submit</button>
+      <button class="header__form-button header__form-button_type_reset" type="reset">Reset</button>
+      <button class="header__form-button header__form-button_type_delete" type="button">Delete Checked</button>
+    </form>
+  </header>
 
-      </nav>
-    -->
-
-    <section class="list-body">
-      <div class="starred-items">
-        <h2 class="starred-items__title">Starred Items</h2>
-        <div class="starred-items__line"></div>
-        <ul class="starred-items__container">
-                    <!-- example: -->
-          <li class="list-item">
-            <div class="list-item__checkbox-holder">
-              <input name="checkbox" class="list-item__checkbox" type="checkbox">
-            </div>
-            <h2 class="list-item__title">Wash Cat</h2>
-            <p class="list-item__description">May also need to buy Band-Aids...</p>
-            <button class="list-item__star" type="button">
-            </button>
-          </li>
-        </ul>
-      </div>
-
-
-      <h2 class="starred-items__title">Standard Items</h2>
+  <section class="list-body">
+    <div class="starred-items">
+      <h2 class="starred-items__title">Starred Items</h2>
       <div class="starred-items__line"></div>
-      <ul class="list-body__container">
-        <li class="list-item">
-          <div class="list-item__checkbox-holder">
-            <input name="checkbox" class="list-item__checkbox" type="checkbox">
-          </div>
-          <h2 class="list-item__title">Wash Cat awsedrftgyhujhygtfvrdesdrftgyu</h2>
-          <p class="list-item__description list-item__description_selected">May also need to buy Band-Aids...May also need to buy Band-Aids...May also need to buy Band-Aids...
-            May also need to buy Band-Aids...May also need to buy Band-Aids...</p>
-            <button class="list-item__star" type="button">
-            </button>
-        </li>
-        <li class="list-item">
-          <div class="list-item__checkbox-holder">
-            <input name="checkbox" class="list-item__checkbox" type="checkbox">
-          </div>
-          <h2 class="list-item__title">Wash Cat</h2>
-          <p class="list-item__description list-item__description_selected">May also need to buy Band-Aids...</p>
-          <button class="list-item__star" type="button">
-          </button>
-        </li>
-        <li class="list-item">
-          <div class="list-item__checkbox-holder">
-            <input name="checkbox" class="list-item__checkbox" type="checkbox">
-          </div>
-          <h2 class="list-item__title">Wash Cat</h2>
-          <p class="list-item__description">May also need to buy Band-Aids...</p>
-          <button class="list-item__star" type="button">
-          </button>
-        </li>
-
-
-
+      <ul class="starred-items__container">
       </ul>
+    </div>
 
-    </section>
 
-    <footer class="footer">
-      <p class="footer__text">A Collaborative Work by LES & NDA</p>
-      <!--
-        footer should just be a copyright block, nothing fancy
-      -->
-    </footer>
+    <h2 class="starred-items__title">Standard Items</h2>
+    <div class="starred-items__line"></div>
+    <ul class="list-body__container">
 
-    <template id="list-item-template">
-      <li class="list-item">
+    </ul>
+
+  </section>
+
+  <footer class="footer">
+    <p class="footer__text">A Collaborative Work by LES & NDA</p>
+  </footer>
+
+  <template id="list-item-template">
+    <li class="list-item">
+      <div class="list-item__checkbox-holder">
         <input name="checkbox" class="list-item__checkbox" type="checkbox">
-        <h2 class="list-item__title"></h2>
-        <p class="list-item__description marked-for-deletion"></p>
-      </li>
-    </template>
+      </div>
+      <h2 class="list-item__title"></h2>
+      <p class="list-item__description marked-for-deletion"></p>
+      <button class="list-item__star" type="button">
+      </button>
+    </li>
+  </template>
 
-    <script type="module" src="./scripts/index.js"></script>
+  <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>
