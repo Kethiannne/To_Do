@@ -1,0 +1,14 @@
+.header__form-field-error {
+  display: none;
+  margin: 0 auto;
+  position: absolute;
+  font-size: 12px;
+  font-weight: 400;
+  color: red;
+  padding-top: 22px;
+  z-index: -1;
+}
+
+.header__form-field-error:last-of-type {
+  padding-top: 65px;
+}

@@ -1,8 +1,8 @@
 /* @import url(./__);
 elements */
 @import url(./__info-wrapper/header__info-wrapper.css);
-@import url(./__title/header__title.css);
 @import url(./__description/header__description.css);
+@import url(./__form-field-error/header__form-field-error.css);
 
 /*form*/
 @import url(./__form/header__form.css);
@@ -17,7 +17,8 @@ elements */
 @import url(./__form-button/_type_reset/header__form-button_type_reset.css);
 @import url(./__form-button/_type_delete/header__form-button_type_delete.css);
 @import url(./__button/header__button_type_expand.css);
-
+@import url(./__form-field-error/_active/header__form-field-error_active.css);
+@import url(./__form-input/_error/header__form-input-error.css);
 
 .header {
   display: flex;

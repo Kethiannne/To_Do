@@ -6,15 +6,15 @@
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/starred-items/starred-items.css);
 
-/* Forms, the overlay, and such */
 
 
-
+/* @import url(../blocks/title-error/title-error.css);
+@import url(../blocks/description-error/description-error.css); */
 
 /* modifiers */
 @import url(../blocks/list-item/__description/_selected/list-item__description_selected.css);
 
 
-/* blank import
+/* blank import example:
 @import url(../);
 */
