@@ -10,10 +10,6 @@
 
   const listItemArray = [
     {
-      title: "Form Validation",
-      description: "add spans which hold error messages"
-    },
-    {
       title: "DOM item sorting function",
       description: "Sorts all list items in both containers alphabetically"
     },
@@ -24,12 +20,22 @@
     {
       title: "Starred items move themselves to starred container",
       description: "And they run the sort function"
+    },
+    {
+      title: "Header button collapses entire component",
+      description: "Header button toggles component between full display and a 'card' which only displays the title, subtitle, and expand button"
+    },
+    {
+      title: "popup for items",
+      description: "when clicked, todo list items open a popup to display their full contents"
     }
   ]
 
   const listItemTemplate = document.querySelector("#list-item-template");
+  const starItemTemplate = document.querySelector("#star-item-template");
   const listContainer = document.querySelector(".list-body__container");
   const starredItemsContainer = document.querySelector(".starred-items__container");
+  const listDisplayToggleButton = document.querySelector(".header__button");
   const form = document.forms.headerForm;
 
   const settings = {
@@ -46,20 +52,33 @@
 
   const renderInitialListItems = () => {
     listItemArray.forEach((item) => {
-      const newItem = new ListItem(item.title, item.description, listItemTemplate);
+      const newItem = new ListItem(item.title, item.description, listItemTemplate, newStarItem);
       const loadItem = newItem.makeListItem();
-      listContainer.prepend(loadItem);
+      listContainer.append(loadItem);
     })
+  }
+
+  const newListItem = (title, description) => {
+    const listItem = new ListItem(title, description, listItemTemplate, newStarItem)
+    const loadListItem = listItem.makeListItem();
+    listContainer.append(loadListItem);
+  }
+
+  const newStarItem = (title, description) => {
+    const starItem = new ListItem(title, description, starItemTemplate, newListItem)
+    const loadStarItem = starItem.makeListItem();
+    starredItemsContainer.append(loadStarItem);
   }
 
   const addListItem = () => {
     const formTitle = form.title.value;
     const formDescription = form.description.value;
-    const newItem = new ListItem(formTitle, formDescription, listItemTemplate);
+    const newItem = new ListItem(formTitle, formDescription, listItemTemplate, newStarItem);
     const loadItem = newItem.makeListItem();
     listContainer.append(loadItem);
     // listSorter();
   }
+
 
   const deleteCheckedListItems = () => {
     const checkboxes = Array.from(document.querySelectorAll(".list-item__checkbox"));
@@ -96,6 +115,17 @@
   form.querySelector(".header__form-button_type_reset").addEventListener("click", () => {
     resetFormFields();
   })
+
+  listDisplayToggleButton.addEventListener("click", (evt) => {
+    listContainer.parentElement.classList.toggle("list-body_display")
+    if (!evt.target.style.transform) {
+      evt.target.style.transform = "rotate(180deg)";
+    } else {
+      evt.target.style.transform = "";
+    }
+  })
+
+
 
 
 // Initializations

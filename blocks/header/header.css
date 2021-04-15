@@ -12,11 +12,13 @@ elements */
 /*button*/
 @import url(./__button/header__button.css);
 
+/* title */
+@import url(./__title/header__title.css);
+
 /* element mods */
 @import url(./__form-button/_type_submit/header__form-button_type_submit.css);
 @import url(./__form-button/_type_reset/header__form-button_type_reset.css);
 @import url(./__form-button/_type_delete/header__form-button_type_delete.css);
-@import url(./__button/header__button_type_expand.css);
 @import url(./__form-field-error/_active/header__form-field-error_active.css);
 @import url(./__form-input/_error/header__form-input-error.css);
 

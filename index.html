@@ -14,7 +14,7 @@
     <div class="header__info-wrapper">
       <h1 class="header__title"> My To-Do List</h1>
       <p class="header__description">I made this list to make me remember to do things</p>
-      <button class="header__button header__button_type_expand button-hover" type="button"></button>
+      <button class="header__button button-expand button-hover button" type="button"></button>
     </div>
     <form class="header__form" name="headerForm">
 
@@ -23,16 +23,13 @@
       <input name="description" type="text" class="header__form-input" placeholder="Item Description" minlength="2" maxlength="512" required>
       <span class="header__form-field-error description-error"></span>
 
-      <button class="header__form-button header__form-button_type_submit button-hover" type="submit" required>Submit</button>
-      <button class="header__form-button header__form-button_type_reset button-hover" type="reset">Reset</button>
-      <button class="header__form-button header__form-button_type_delete button-hover" type="button">Delete Checked</button>
+      <button class="button header__form-button header__form-button_type_submit button-hover" type="submit" required>Submit</button>
+      <button class="button header__form-button header__form-button_type_reset button-hover" type="reset">Reset</button>
+      <button class="button header__form-button header__form-button_type_delete button-hover" type="button">Delete Checked</button>
     </form>
   </header>
 
   <section class="list-body">
-
-  <!--
-    Under Construction
 
     <div class="starred-items">
       <h2 class="starred-items__title">Starred Items</h2>
@@ -41,10 +38,9 @@
       </ul>
     </div>
 
-
     <h2 class="starred-items__title">Standard Items</h2>
     <div class="starred-items__line"></div>
-  -->
+
 
     <ul class="list-body__container">
 
@@ -63,7 +59,18 @@
       </div>
       <h2 class="list-item__title"></h2>
       <p class="list-item__description marked-for-deletion"></p>
-      <button class="list-item__star button-hover" type="button">
+      <button class="button list-item__star button-hover" type="button">
+      </button>
+    </li>
+  </template>
+  <template id="star-item-template">
+    <li class="list-item">
+      <div class="list-item__checkbox-holder">
+        <input name="checkbox" class="list-item__checkbox" type="checkbox">
+      </div>
+      <h2 class="list-item__title"></h2>
+      <p class="list-item__description marked-for-deletion"></p>
+      <button class="button list-item__star list-item__star_clicked button-hover" type="button">
       </button>
     </li>
   </template>

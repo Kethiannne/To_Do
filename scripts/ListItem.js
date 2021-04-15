@@ -5,10 +5,11 @@
 // classes
 
   export class ListItem {
-  constructor(title, description, template) {
+  constructor(title, description, template, starClick) {
       this._title = title;
       this._description = description;
       this._template = template;
+      this._starClick = starClick;
   }
 
 
@@ -23,8 +24,9 @@
     }
 
     _handleStars(evt) {
-      evt.target.classList.toggle("list-item__star_clicked");
-      listSorter();
+      // listSorter();
+      this._starClick(this._title, this._description);
+      evt.target.parentElement.remove();
     }
 
     _addEventListeners() {

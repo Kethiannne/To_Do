@@ -17,3 +17,7 @@
   margin: 40px auto;
   box-shadow: 4px 4px 18px 2px rgb(80 80 80 / 40%);
 }
+
+.list-item:last-of-type {
+  margin-bottom: 0px;
+}
